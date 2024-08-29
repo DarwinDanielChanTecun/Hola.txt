@@ -1,0 +1,76 @@
+<DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lista de Personas</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e9fcf0;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #c4f9ff;
+
+
+        }
+
+        th {
+            background-color: rgb(160, 254, 254);
+        }
+    </style>
+
+    <script src="table.js"></script>
+
+</head>
+
+<body>
+
+    <h3>Usuario: <span id="username"></span></h3>
+    <button id="logoutBtn">Cerrar sesión</button>
+
+    <h1>Lista de Personas</h1>
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Usuario</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Rol de Empresa</th>
+                <th>Correo</th>
+                <th>Teléfono</th>
+                <th>Intentos de Fallidos</th>
+                <th>Bloqueado</th>
+            </tr>
+        </thead>
+
+        <tbody id="usersTableBody">
+
+        </tbody>
+
+    </table>
+
+    <button id="editUserBtn">Modificar Usuario</button>
+    <button id="deleteUserBtn">Eliminar Usuario</button>
+
+</body>
+</html>

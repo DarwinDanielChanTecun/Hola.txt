@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+    <script src="deleted.js"></script>
+</head>
+
+
+<body>
+    <script>
+  document.addEventListener('DOMContentLoaded', function() {
+
+var container = document.createElement('div');
+container.style.backgroundColor = '#fff';
+container.style.padding = '20px';
+container.style.borderRadius = '8px';
+container.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.1)';
+container.style.width = '300px';
+container.style.margin = 'auto';
+container.style.marginTop = '50px';
+container.style.fontFamily = 'Arial, sans-serif';
+
+// Crear título
+var title = document.createElement('h2');
+title.textContent = 'Eliminar Usuario';
+container.appendChild(title);
+
+// Función para crear campos de entrada
+function createInputField(labelText, inputType, inputId) {
+    var label = document.createElement('label');
+    label.textContent = labelText;
+    label.style.display = 'block';
+    label.style.marginBottom = '5px';
+    container.appendChild(label);
+
+    var input = document.createElement('input');
+    input.type = inputType;
+    input.id = inputId;
+    input.style.width = '100%';
+    input.style.padding = '8px';
+    input.style.marginBottom = '10px';
+    input.style.border = '1px solid #ccc';
+    input.style.borderRadius = '4px';
+    container.appendChild(input);
+}
+
+// Crear campos de entrada
+createInputField('Id:', 'text', 'Id');
+createInputField('Nombre:', 'text', 'nombre');
+createInputField('Apellido:', 'text', 'apellido');
+createInputField('Rol de Empresa:', 'text', 'rol');
+createInputField('Correo:', 'email', 'correo');
+createInputField('Teléfono:', 'tel', 'telefono');
+
+
+var saveButton = document.createElement('button');
+saveButton.textContent = 'Eliminar';
+saveButton.style.width = '100%';
+saveButton.style.padding = '10px';
+saveButton.style.backgroundColor = '#4CAF50';
+saveButton.style.color = 'white';
+saveButton.style.border = 'none';
+saveButton.style.borderRadius = '4px';
+saveButton.style.cursor = 'pointer';
+saveButton.addEventListener('click', function() {
+    alert('Usuario Eliminado con éxito');
+    window.location.href = 'table.html'; 
+});
+saveButton.addEventListener('mouseover', function() {
+    saveButton.style.backgroundColor = '#45a049';
+});
+saveButton.addEventListener('mouseout', function() {
+    saveButton.style.backgroundColor = '#4CAF50';
+});
+container.appendChild(saveButton);
+
+
+document.body.appendChild(container);
+
+// Estilos del cuerpo del documento
+document.body.style.backgroundColor = '#f0f8ff';
+document.body.style.display = 'flex';
+document.body.style.justifyContent = 'center';
+document.body.style.alignItems = 'center';
+document.body.style.height = '100vh';
+});
+
+</script>
+
+</body>
+</html>
